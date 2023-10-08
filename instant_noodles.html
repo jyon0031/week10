@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Choropleth Map and Bar Graph</title>
+    <!-- Include Vega, Vega-Lite, and Vega-Embed libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite@5"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
+</head>
+
+<body>
+    <!-- Placeholders for the visualizations -->
+    <div id="choropleth_map" style="width: 100%; height: 400px;"></div>
+    <div id="bar_graph" style="width: 100%; height: 400px;"></div>
+
+    <script>
+        // URLs for the visualizations in .json format
+        const choroplethURL = "https://raw.githubusercontent.com/jyon0031/3171_minwage/main/visualization.vl%20(1).json";
+        const barGraphURL = "https://raw.githubusercontent.com/jyon0031/3171_minwage/main/visualization.vl.json";
+
+        // Embed the visualizations using their URLs
+        vegaEmbed('#choropleth_map', choroplethURL, { mode: 'vega-lite' });
+        vegaEmbed('#bar_graph', barGraphURL, { mode: 'vega-lite' });
+    </script>
+</body>
+
+</html>
